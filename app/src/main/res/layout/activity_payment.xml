@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    tools:context=".TicketPaymentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- Back arrow -->
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="#FEFAFD"
+                android:contentDescription="Back"
+                android:onClick="goToHomePage"
+                android:src="@drawable/baseline_arrow_back_ios_new_24" />
+
+            <!-- Payment Method Text -->
+            <TextView
+                android:id="@+id/paymentMethodText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Payment Method"
+                android:textSize="24sp"
+                android:fontFamily="@font/poppins"/>
+        </RelativeLayout>
+
+        <!-- Pilih Bioskop Text -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/pilihBioskopText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Pilih Bioskop"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins"/>
+
+            <!-- Spinner Pilih Bioskop -->
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/bioskopSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/pilihBioskopText"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded"
+                android:fontFamily="@font/poppins"
+                android:spinnerMode="dropdown"/>
+        </RelativeLayout>
+
+        <!-- Pilih Jenis Seat Text -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:id="@+id/jenisSeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Pilih Jenis Seat"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins"/>
+
+            <!-- Spinner Pilih Jenis Seat -->
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/jenisSeatSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/jenisSeat"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins"
+                android:background="@drawable/rounded"
+                android:spinnerMode="dropdown"/>
+        </RelativeLayout>
+
+        <!-- Pilih Tanggal Text -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/pilihTanggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Tanggal"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins"/>
+
+            <!-- DatePicker -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/datePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pilihTanggal"
+                android:layout_marginTop="10dp"
+                android:layout_centerVertical="true"
+                android:text="Pilih Tanggal"
+                android:fontFamily="@font/poppins"
+                android:background="@drawable/rounded"/>
+        </RelativeLayout>
+
+        <!-- Name Seat -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/regularSeatText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Nama Seat"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"/>
+            <TextView
+                android:id="@+id/regularSeatPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:text="Rp0"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"/>
+        </RelativeLayout>
+
+        <!-- Garis -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/regularSeatText"
+            android:background="#000"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Actual Pay -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/actualPayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Actual Pay"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"/>
+
+            <!-- Actual Pay Price -->
+            <TextView
+                android:id="@+id/actualPayPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:text="Rp0"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"/>
+        </RelativeLayout>
+
+        <!-- Add Payment Method -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/addPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Add Payment Method"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins"/>
+
+            <!-- Spinner Add Payment Method -->
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/paymentSpinner"
+                android:layout_below="@+id/addPayment"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/rounded"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bank"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@+id/paymentSpinner">
+            <!-- Spinner Bank -->
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/bankSpinner"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins"
+                android:background="@drawable/rounded"
+                android:spinnerMode="dropdown"/>
+            <!-- Account Number Filltext -->
+            <EditText
+                android:id="@+id/accountNumber"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:drawablePadding="20dp"
+                android:paddingHorizontal="15dp"
+                android:hint="Account Number"
+                android:textAlignment="textStart"
+                android:inputType="number"
+                android:fontFamily="@font/poppins"
+                android:background="@drawable/rounded"/>
+        </LinearLayout>
+
+        <!-- Order Summary Button -->
+        <Button
+            android:id="@+id/orderButton"
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/bank"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/red"
+            android:fontFamily="@font/poppins"
+            android:text="Order Summary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:cornerRadius = "15dp"
+            tools:layout_marginBottom="0dp" />
+    </LinearLayout>
+</ScrollView>

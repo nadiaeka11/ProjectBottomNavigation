@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">TixApp</string>
+    <string name="checkbox">Remember</string>
+    <array name="listBioskop">
+        <item>Select</item>
+        <item>XXI Ambarukmo Plaza, Studio 1</item>
+        <item>CGV Pakuwon Mall Yogyakarta, Studio 3</item>
+        <item>XXI Empire, Studio 2</item>
+        <item>XXI Jogja City Mall, Studio 3</item>
+    </array>
+    <array name="listSeats">
+        <item>Select</item>
+        <item>Regular</item>
+        <item>Premiere</item>
+    </array>
+    <array name="listPayment">
+        <item>Select</item>
+        <item>Cash</item>
+        <item>Debit Card</item>
+        <item>Credit Card</item>
+        <item>QRIS</item>
+    </array>
+    <array name="listBank">
+        <item>Select</item>
+        <item>BNI</item>
+        <item>BCA</item>
+        <item>Mandiri</item>
+        <item>BRI</item>
+        <item>BSI</item>
+    </array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

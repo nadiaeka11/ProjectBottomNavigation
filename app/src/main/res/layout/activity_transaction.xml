@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/order_summary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Back Arrow Image -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#ECEFF5"
+            android:contentDescription="Back"
+            android:onClick="goToHomePage"
+            android:src="@drawable/baseline_arrow_back_ios_new_24" />
+
+        <!-- Order Summary Text -->
+        <TextView
+            android:id="@+id/orderSummaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:text="Order Summary"
+            android:textSize="24sp"
+            android:fontFamily="@font/poppins_bold"/>
+
+        <RelativeLayout
+            android:id="@+id/detail"
+            android:layout_below="@id/orderSummaryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+            <!-- Image -->
+            <ImageView
+                android:id="@+id/moviePosterImage"
+                android:layout_width="90dp"
+                android:layout_height="120dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="45dp"
+                android:src="@drawable/poster3"
+                android:scaleType="fitXY" />
+            <!-- Movie Title Text -->
+            <TextView
+                android:id="@+id/movieTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="110dp"
+                android:text="Mencuri Raden Saleh"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins"/>
+
+            <!-- Movie Details Text -->
+            <TextView
+                android:id="@+id/movieDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movieTitle"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="110dp"
+                android:text="XXI Ambarukmo Plaza, Studio 1"
+                android:fontFamily="@font/poppins"/>
+
+            <!-- Date Text -->
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movieDetails"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="110dp"
+                android:text="Wednesday, 20 Nov 2019, 15:05"
+                android:fontFamily="@font/poppins"/>
+        </RelativeLayout>
+
+        <!-- Order Number Text -->
+        <TextView
+            android:id="@+id/orderNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:text="Order Number"
+            android:fontFamily="@font/poppins"/>
+
+        <!-- Order Number Value Text -->
+        <TextView
+            android:id="@+id/orderNumberValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/orderNumberText"
+            android:layout_marginStart="20dp"
+            android:text="1198804794001625088"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins"/>
+
+        <!-- Seat Text -->
+        <TextView
+            android:id="@+id/seatText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/orderNumberValueText"
+            android:layout_marginStart="20dp"
+            android:text="Seat"
+            android:fontFamily="@font/poppins"/>
+
+        <!-- Seat Type Text -->
+        <TextView
+            android:id="@+id/seatType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seatText"
+            android:layout_marginStart="20dp"
+            android:text="Regular"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins"/>
+
+        <!-- Payment Method Text -->
+        <TextView
+            android:id="@+id/paymentMethodText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seatType"
+            android:text="Payment Method"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/poppins"/>
+
+        <!-- Payment Method Value Text -->
+        <TextView
+            android:id="@+id/paymentMethodValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/paymentMethodText"
+            android:layout_marginStart="20dp"
+            android:text="Bank transfer (BNI)"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins"/>
+
+        <!-- Seat Price Text -->
+        <TextView
+            android:id="@+id/seatPriceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/paymentMethodValueText"
+            android:layout_marginStart="20dp"
+            android:text="Regular Seat"
+            android:fontFamily="@font/poppins"/>
+
+        <!-- Seat Price Value Text -->
+        <TextView
+            android:id="@+id/seatPriceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seatPriceText"
+            android:layout_marginStart="20dp"
+            android:text="Rp35.000"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins"/>
+
+        <!-- Convenience Fee Text -->
+        <TextView
+            android:id="@+id/convenienceFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seatPriceValue"
+            android:layout_marginStart="20dp"
+            android:text="Convenience Fee"
+            android:fontFamily="@font/poppins"/>
+
+        <!-- Convenience Fee Value Text -->
+        <TextView
+            android:id="@+id/convenienceFeeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/convenienceFee"
+            android:layout_marginStart="20dp"
+            android:text="Rp0"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins"/>
+
+        <!-- Horizontal Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/convenienceFeeValue"
+            android:layout_marginStart="20dp"
+            android:background="#000"
+            android:fontFamily="@font/poppins"/>
+
+        <!-- Actual Pay Text -->
+        <TextView
+            android:id="@+id/actualPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/convenienceFeeValue"
+            android:layout_marginStart="20dp"
+            android:text="Actual Pay"
+            android:fontFamily="@font/poppins"/>
+
+        <!-- Actual Pay Value Text -->
+        <TextView
+            android:id="@+id/actualPayValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/actualPay"
+            android:layout_marginStart="20dp"
+            android:text="Rp35.000"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:fontFamily="@font/poppins"/>
+
+    </RelativeLayout>
+</ScrollView>
