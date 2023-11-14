@@ -10,12 +10,6 @@ class LoginActivity : AppCompatActivity() {
     //Mendeklarasi variabel binding untuk mengikat elemen tampilan pada layout activity_main
     private lateinit var binding: ActivityLoginBinding
 
-    //Mendefinisi konstanta sebagai kunci ketika mengirim data antar aktivitas dengan "Intent"
-    companion object {
-        const val EXT_USN = "ext_usn"
-        const val EXT_PASS = "ext_pass"
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //menginisialisasi variabel binding. Metode inflate digunakan untuk menghubungkan layout XML activity_main.xml dengan kode Kotlin, sehingga dapat mengakses elemen-elemen tampilan yang ada di dalamnya.
@@ -29,8 +23,8 @@ class LoginActivity : AppCompatActivity() {
                 val password = password.text.toString().trim()
 
                 val intentFirst = Intent(this@LoginActivity, Layout::class.java)
-                intentFirst.putExtra(EXT_USN, username)
-                intentFirst.putExtra(EXT_PASS, password)
+                intentFirst.putExtra(Layout.EXT_USN, username)
+                intentFirst.putExtra(Layout.EXT_PASS, password)
                 startActivity(intentFirst)
                 }
             }
